@@ -1,0 +1,65 @@
+""""""""""""""""
+" Basic settings
+""""""""""""""""
+let mapleader=","
+filetype on
+filetype plugin on
+syntax enable
+syntax on
+set nowrap
+set background=dark
+
+"""""""""
+" Indents
+"""""""""
+filetype indent on
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+""""""""""""
+" Statusline
+""""""""""""
+set laststatus=2
+set ruler
+set number
+set cursorline
+set cursorcolumn
+set hlsearch
+
+""""""""""""""""""
+" Leader shortcuts
+""""""""""""""""""
+" Copy selected block to clipboard
+vnoremap <Leader>y "+y
+" Paste clipboard to vim
+nmap <Leader>p "+p
+" Close current window
+nmap <Leader>q :q<CR>
+" Save current window
+nmap <Leader>w :w<CR>
+" Save all windows and exit
+nmap <Leader>WQ :wa<CR>:q<CR>
+" Exit vim without any saving
+nmap <Leader>Q :qa!<CR>
+
+" Iterate within windows
+nnoremap nw <C-W><C-W>
+" Jump to window to the left/right
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+" Jump to subwindow to the top/bottom
+nnoremap <C-k> <C-W>k
+nnoremap <C-j> <C-W>j
+" Jump to paired character
+nmap <Leader>M %
+
+" Instant load vim config
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+set incsearch
+set ignorecase
+set nocompatible
+set wildmenu
+
+
